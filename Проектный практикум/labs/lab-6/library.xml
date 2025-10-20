@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<library><book id="1" is_available="true"><title>Python для начинающих</title><author>Иванов И.И.</author><year>2022</year><genre>Программирование</genre></book><book id="2" is_available="true"><title>Алгоритмы и структуры данных</title><author>Петров П.П.</author><year>2021</year><genre>Компьютерные науки</genre></book><book id="3" is_available="true"><title>Машинное обучение</title><author>Сидорова С.С.</author><year>2023</year><genre>Искусственный интеллект</genre></book></library>

@@ -1,0 +1,13 @@
+[database]
+host = "localhost"
+port = 5432
+user = "admin"
+
+[settings]
+debug = true
+log_level = "INFO"
+timeout = 30
+allowed_ips = [ "192.168.1.1", "10.0.0.1",]
+
+[paths]
+home = "/usr/local/app"

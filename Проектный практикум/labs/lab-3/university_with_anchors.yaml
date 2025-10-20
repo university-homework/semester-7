@@ -1,0 +1,34 @@
+
+# Определение анкоров
+defaults: &default_contact
+  email: "info@university.edu"
+  phone: "+7-495-123-45-67"
+  address: "ул. Академическая, д. 15"
+
+base_department: &base_dept
+  head: "Иванов А.П."
+  building: "Главный корпус"
+
+university: "Технический Университет"
+academic_year: 2025-2026
+
+departments:
+  - name: "Информационные системы"
+    <<: *base_dept
+    students_count: 170
+    floor: 3
+
+  - name: "Компьютерная инженерия"
+    <<: *base_dept
+    head: "Петрова М.В."  # Переопределение
+    students_count: 120
+    floor: 2
+
+  - name: "Кибернетика"
+    <<: *base_dept
+    head: "Сидоров О.И."
+    students_count: 80
+    floor: 4
+
+contact:
+  <<: *default_contact  # Использование всех полей из анкора

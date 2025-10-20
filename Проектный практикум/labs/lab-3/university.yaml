@@ -1,0 +1,16 @@
+academic_year: 2025-2026
+contact:
+  address: ул. Академическая, д. 15
+  email: info@university.edu
+  phone: +7-495-123-45-67
+departments:
+- head: Иванов А.П.
+  name: Информационные системы
+  students_count: 170
+- head: Петрова М.В.
+  name: Компьютерная инженерия
+  students_count: 120
+- head: Сидоров О.И.
+  name: Кибернетика
+  students_count: 80
+university: Технический Университет

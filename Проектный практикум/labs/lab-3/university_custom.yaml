@@ -1,0 +1,11 @@
+academic_year: 2025-2026
+departments:
+- established: '!date 2005-09-01'
+  name: Информационные системы
+  students_count: 170
+- established: '!date 2008-03-10'
+  name: Компьютерная инженерия
+  students_count: 120
+founded: '!date 1990-05-15'
+next_meeting: '!datetime 2025-03-20 14:30:00'
+university: Технический Университет
