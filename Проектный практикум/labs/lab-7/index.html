@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG в HTML</title>
+</head>
+<body>
+  <h1>Встраивание SVG в HTML</h1>
+
+  <h2>1. Вставка через тег &lt;img&gt;</h2>
+  <div>
+    <img src="smiley.svg" alt="Смайлик">
+  </div>
+
+  <h2>2. Прямое встраивание SVG (Inline)</h2>
+  <div>
+    <svg id="smiley-inline" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" fill="yellow" stroke="black" stroke-width="2"/>
+      <circle cx="70" cy="80" r="10" fill="black"/>
+      <circle cx="130" cy="80" r="10" fill="black"/>
+      <polygon points="100,90 90,120 110,120" fill="black"/>
+      <path d="M 60,120 Q 100,160 140,120" stroke="black" stroke-width="3" fill="transparent"/>
+    </svg>
+  </div>
+</body>
+</html>
