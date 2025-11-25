@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Поликлиники</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .endpoint {
+            margin: 10px 0;
+            padding: 8px;
+            border-left: 3px solid #007cba;
+        }
+        .path {
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 2px 5px;
+            text-decoration: none;
+            color: #007cba;
+        }
+        .path:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Поликлиники</h1>
+    
+    <p>Пациентов: <span id="patientCount">0</span>, 
+    Средний возраст: <span id="avgAge">0</span> лет</p>
+
+    <div class="endpoint">
+        <a class="path" href="/patients">GET /patients</a> - Все пациенты
+    </div>
+
+    <div class="endpoint">
+        <a class="path" href="/patients/1">GET /patients/:id</a> - Пациент по ID
+    </div>
+
+    <div class="endpoint">
+        <a class="path" href="/patients/stats/total-age">GET /patients/stats/total-age</a> - Статистика
+    </div>
+
+    <div class="endpoint">
+        <a class="path" href="/patients/search/by-name/Иван">GET /patients/search/by-name/:name</a> - Поиск по имени
+    </div>
+
+    <div class="endpoint">
+        <a class="path" href="/patients/search/by-diagnosis/Гипертония">GET /patients/search/by-diagnosis/:diagnosis</a> - Поиск по диагнозу
+    </div>
+
+    <script>
+        fetch('/patients/stats/total-age')
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('patientCount').textContent = data.data.patientCount;
+                    document.getElementById('avgAge').textContent = data.data.averageAge;
+                }
+            });
+    </script>
+</body>
+</html>
