@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="aviation_system">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="metadata">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="created" type="xs:dateTime"/>
+                            <xs:element name="last_updated" type="xs:dateTime"/>
+                            <xs:element name="total_airports" type="xs:integer"/>
+                            <xs:element name="total_aircraft" type="xs:integer"/>
+                            <xs:element name="security_levels" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="airport_hierarchy">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="hubs">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="hub" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="name" type="xs:string"/>
+                                                    <xs:element name="location" type="xs:string"/>
+                                                    <xs:element name="runways" type="xs:integer"/>
+                                                    <xs:element name="terminal_capacity" type="xs:integer"/>
+                                                    <xs:element name="current_passengers" type="xs:integer"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="id" type="xs:string" use="required"/>
+                                                <xs:attribute name="region" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="version" type="xs:decimal" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

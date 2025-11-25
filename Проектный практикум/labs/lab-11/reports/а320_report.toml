@@ -1,0 +1,36 @@
+aircraft_type = "А320"
+flights_count = 1
+[[flights]]
+number = "SU-1445"
+route = "Москва-Сочи"
+aircraft_type = "А320"
+status = "scheduled"
+
+[flights.schedule]
+departure = 2024-01-15T07:45:00Z
+arrival = 2024-01-15T10:00:00Z
+duration = "2h15m"
+[flights.airport_info]
+departure_gate = "B12"
+baggage_drop = 34
+checkin_desk = "34-38"
+boarding_started = true
+[flights.status_info]
+on_time = true
+current_status = "посадка началась"
+last_update = 2024-01-15T06:30:00Z
+[flights.passenger_stats]
+capacity = 180
+booked = 165
+checked_in = 120
+boarded = 45
+[flights.daily_metrics]
+date = 2024-01-15
+load_factor = 0.92
+fuel_consumption = 4200.0
+delay_minutes = 0
+
+[summary]
+total_flights = 1
+avg_load_factor = 0.92
+avg_delay = 0

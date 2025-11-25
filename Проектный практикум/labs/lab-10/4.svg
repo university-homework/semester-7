@@ -1,0 +1,21 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <title>Инфографика</title>
+
+  <!-- Столбец 1 -->
+  <rect x="100" y="200" width="50" height="0" fill="green">
+    <animate attributeName="height" from="0" to="150" dur="2s" fill="freeze"/>
+    <animate attributeName="y" from="350" to="200" dur="2s" fill="freeze"/>
+  </rect>
+
+  <!-- Столбец 2 -->
+  <rect x="200" y="250" width="50" height="0" fill="blue">
+    <animate attributeName="height" from="0" to="100" dur="2s" begin="1s" fill="freeze"/>
+    <animate attributeName="y" from="350" to="250" dur="2s" begin="1s" fill="freeze"/>
+  </rect>
+
+  <!-- Столбец 3 -->
+  <rect x="300" y="150" width="50" height="0" fill="red">
+    <animate attributeName="height" from="0" to="200" dur="2s" begin="2s" fill="freeze"/>
+    <animate attributeName="y" from="350" to="150" dur="2s" begin="2s" fill="freeze"/>
+  </rect>
+</svg>

@@ -1,0 +1,36 @@
+aircraft_type = "Сухой Суперджет 100"
+flights_count = 1
+[[flights]]
+number = "SU-1256"
+route = "Москва-Санкт-Петербург"
+aircraft_type = "Сухой Суперджет 100"
+status = "boarding"
+
+[flights.schedule]
+departure = 2024-01-15T08:20:00Z
+arrival = 2024-01-15T09:35:00Z
+duration = "1h15m"
+[flights.airport_info]
+departure_gate = "C08"
+baggage_drop = 41
+checkin_desk = "40-42"
+boarding_started = true
+[flights.status_info]
+on_time = true
+current_status = "посадка завершается"
+last_update = 2024-01-15T07:50:00Z
+[flights.passenger_stats]
+capacity = 98
+booked = 95
+checked_in = 92
+boarded = 85
+[flights.daily_metrics]
+date = 2024-01-15
+load_factor = 0.97
+fuel_consumption = 2800.0
+delay_minutes = 0
+
+[summary]
+total_flights = 1
+avg_load_factor = 0.97
+avg_delay = 0

@@ -1,0 +1,28 @@
+airports_to_monitor:
+- id: HUB-001
+  monitoring_points:
+  - fuel_levels
+  - maintenance
+  name: Шереметьево
+- id: HUB-002
+  monitoring_points:
+  - fuel_levels
+  - maintenance
+  name: Пулково
+- id: REG-101
+  monitoring_points:
+  - maintenance
+  name: Домодедово
+- id: REG-201
+  monitoring_points:
+  - maintenance
+  name: Ладога
+monitoring_system:
+  alert_thresholds:
+    high_utilization: 90
+    low_fuel: 20
+    maintenance_due: 7
+  check_intervals:
+    fuel_levels: 15m
+    maintenance_schedule: 1h
+    security_checks: 30m

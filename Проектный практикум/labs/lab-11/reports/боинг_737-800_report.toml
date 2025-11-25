@@ -1,0 +1,37 @@
+aircraft_type = "Боинг 737-800"
+flights_count = 1
+[[flights]]
+number = "SU-1789"
+route = "Москва-Новосибирск"
+aircraft_type = "Боинг 737-800"
+status = "delayed"
+
+[flights.schedule]
+departure = 2024-01-15T09:30:00Z
+arrival = 2024-01-15T14:45:00Z
+duration = "4h15m"
+[flights.airport_info]
+departure_gate = "A05"
+baggage_drop = 22
+checkin_desk = "22-25"
+boarding_started = false
+[flights.status_info]
+on_time = false
+current_status = "задержка 45 минут"
+last_update = 2024-01-15T08:15:00Z
+delay_reason = "техническая проверка"
+[flights.passenger_stats]
+capacity = 189
+booked = 142
+checked_in = 89
+boarded = 0
+[flights.daily_metrics]
+date = 2024-01-15
+load_factor = 0.75
+fuel_consumption = 5800.0
+delay_minutes = 45
+
+[summary]
+total_flights = 1
+avg_load_factor = 0.75
+avg_delay = 45

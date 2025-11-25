@@ -1,0 +1,122 @@
+[airline]
+name = "Аэрофлот"
+code = "SU"
+hub = "Шереметьево"
+
+[[flights]]
+number = "SU-1445"
+route = "Москва-Сочи"
+aircraft_type = "А320"
+status = "scheduled"
+
+[flights.schedule]
+departure = 2024-01-15T07:45:00Z
+arrival = 2024-01-15T10:00:00Z
+duration = "2h15m"
+
+[flights.airport_info]
+departure_gate = "B12"
+baggage_drop = 34
+checkin_desk = "34-38"
+boarding_started = true
+
+[flights.status_info]
+on_time = true
+current_status = "посадка началась"
+last_update = 2024-01-15T06:30:00Z
+
+[flights.passenger_stats]
+capacity = 180
+booked = 165
+checked_in = 120
+boarded = 45
+
+[flights.daily_metrics]
+date = 2024-01-15
+load_factor = 0.92
+fuel_consumption = 4200.0
+delay_minutes = 0
+
+[[flights]]
+number = "SU-1789"
+route = "Москва-Новосибирск"
+aircraft_type = "Боинг 737-800"
+status = "delayed"
+
+[flights.schedule]
+departure = 2024-01-15T09:30:00Z
+arrival = 2024-01-15T14:45:00Z
+duration = "4h15m"
+
+[flights.airport_info]
+departure_gate = "A05"
+baggage_drop = 22
+checkin_desk = "22-25"
+boarding_started = false
+
+[flights.status_info]
+on_time = false
+current_status = "задержка 45 минут"
+last_update = 2024-01-15T08:15:00Z
+delay_reason = "техническая проверка"
+
+[flights.passenger_stats]
+capacity = 189
+booked = 142
+checked_in = 89
+boarded = 0
+
+[flights.daily_metrics]
+date = 2024-01-15
+load_factor = 0.75
+fuel_consumption = 5800.0
+delay_minutes = 45
+
+[[flights]]
+number = "SU-1256"
+route = "Москва-Санкт-Петербург"
+aircraft_type = "Сухой Суперджет 100"
+status = "boarding"
+
+[flights.schedule]
+departure = 2024-01-15T08:20:00Z
+arrival = 2024-01-15T09:35:00Z
+duration = "1h15m"
+
+[flights.airport_info]
+departure_gate = "C08"
+baggage_drop = 41
+checkin_desk = "40-42"
+boarding_started = true
+
+[flights.status_info]
+on_time = true
+current_status = "посадка завершается"
+last_update = 2024-01-15T07:50:00Z
+
+[flights.passenger_stats]
+capacity = 98
+booked = 95
+checked_in = 92
+boarded = 85
+
+[flights.daily_metrics]
+date = 2024-01-15
+load_factor = 0.97
+fuel_consumption = 2800.0
+delay_minutes = 0
+
+[weekly_schedule.monday]
+flights_count = 12
+avg_load_factor = 0.85
+peak_hours = ["07:00-09:00", "18:00-20:00"]
+
+[weekly_schedule.tuesday]
+flights_count = 10
+avg_load_factor = 0.78
+peak_hours = ["07:00-09:00", "19:00-21:00"]
+
+[weekly_schedule.wednesday]
+flights_count = 11
+avg_load_factor = 0.82
+peak_hours = ["06:00-08:00", "17:00-19:00"]

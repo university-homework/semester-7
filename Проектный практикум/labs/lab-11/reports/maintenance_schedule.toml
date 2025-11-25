@@ -1,0 +1,14 @@
+[maintenance_schedule]
+next_check = "2025-11-25"
+[[maintenance_schedule.flights_due]]
+flight_number = "SU-1445"
+aircraft_type = "А320"
+reason = "высокий расход топлива"
+priority = "medium"
+
+[[maintenance_schedule.flights_due]]
+flight_number = "SU-1789"
+aircraft_type = "Боинг 737-800"
+reason = "высокий расход топлива"
+priority = "high"
+

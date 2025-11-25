@@ -1,0 +1,18 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <title>Падающий снег</title>
+  <rect width="800" height="600" fill="darkblue"/>
+
+  <!-- Снежинки -->
+  <circle cx="100" cy="0" r="4" fill="white">
+    <animateMotion path="M 100,0 C 150,100 50,200 100,300 150,400 50,500 100,600"
+                  dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="0" r="3" fill="white">
+    <animateMotion path="M 300,0 C 350,150 250,250 300,400 350,550 250,600 300,600"
+                  dur="6s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="500" cy="0" r="5" fill="white">
+    <animateMotion path="M 500,0 C 450,100 550,200 500,300 450,400 550,500 500,600"
+                  dur="4s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+</svg>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aviation_system version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <metadata>
+        <created>2024-01-15T10:00:00Z</created>
+        <last_updated>2024-01-15T15:30:00Z</last_updated>
+        <total_airports>156</total_airports>
+        <total_aircraft>842</total_aircraft>
+        <security_levels>15</security_levels>
+    </metadata>
+
+    <airport_hierarchy>
+        <hubs>
+            <hub id="HUB-001" region="Центральный">
+                <name>Шереметьево</name>
+                <location>Москва</location>
+                <runways>5</runways>
+                <terminal_capacity>45000</terminal_capacity>
+                <current_passengers>38500</current_passengers>
+                <maintenance_zones>
+                    <zone type="heavy_maintenance" capacity="8" current="6"/>
+                    <zone type="light_maintenance" capacity="15" current="12"/>
+                    <zone type="emergency_repair" capacity="4" current="1"/>
+                </maintenance_zones>
+                <fuel_capacity>800000</fuel_capacity>
+                <current_fuel>650000</current_fuel>
+                <security_level>15</security_level>
+            </hub>
+
+            <hub id="HUB-002" region="Северо-Западный">
+                <name>Пулково</name>
+                <location>Санкт-Петербург</location>
+                <runways>3</runways>
+                <terminal_capacity>28000</terminal_capacity>
+                <current_passengers>23500</current_passengers>
+                <maintenance_zones>
+                    <zone type="heavy_maintenance" capacity="5" current="3"/>
+                    <zone type="light_maintenance" capacity="10" current="8"/>
+                    <zone type="emergency_repair" capacity="3" current="0"/>
+                </maintenance_zones>
+                <fuel_capacity>500000</fuel_capacity>
+                <current_fuel>420000</current_fuel>
+                <security_level>15</security_level>
+            </hub>
+        </hubs>
+
+        <regional_airports>
+            <airport id="REG-101" region="Центральный" parent_hub="HUB-001">
+                <name>Домодедово</name>
+                <location>Московская область</location>
+                <runways>2</runways>
+                <terminal_capacity>18000</terminal_capacity>
+                <current_passengers>16500</current_passengers>
+                <maintenance_facilities>
+                    <facility type="light_maintenance" capacity="6" current="4"/>
+                    <facility type="emergency_repair" capacity="2" current="1"/>
+                </maintenance_facilities>
+                <fuel_monitoring>
+                    <tank id="TANK-REG101-01" capacity="200000" current="150000" status="normal"/>
+                    <tank id="TANK-REG101-02" capacity="150000" current="120000" status="normal"/>
+                </fuel_monitoring>
+                <security_level>12</security_level>
+            </airport>
+
+            <airport id="REG-201" region="Северо-Западный" parent_hub="HUB-002">
+                <name>Ладога</name>
+                <location>Ленинградская область</location>
+                <runways>1</runways>
+                <terminal_capacity>8000</terminal_capacity>
+                <current_passengers>7200</current_passengers>
+                <maintenance_facilities>
+                    <facility type="light_maintenance" capacity="4" current="3"/>
+                </maintenance_facilities>
+                <fuel_monitoring>
+                    <tank id="TANK-REG201-01" capacity="100000" current="85000" status="normal"/>
+                </fuel_monitoring>
+                <security_level>10</security_level>
+            </airport>
+        </regional_airports>
+
+        <local_airports>
+            <airport id="LOC-5001" region="Центральный" parent_airport="REG-101">
+                <name>Внуково</name>
+                <location>Москва</location>
+                <type>международный</type>
+                <terminal_capacity>12000</terminal_capacity>
+                <current_passengers>11500</current_passengers>
+                <maintenance_capacity>2</maintenance_capacity>
+                <current_maintenance>1</current_maintenance>
+                <fuel_facilities>
+                    <refueling_station id="REFUEL-LOC5001-01" capacity="50000" current="45000"/>
+                    <refueling_station id="REFUEL-LOC5001-02" capacity="50000" current="38000"/>
+                </fuel_facilities>
+                <security_level>8</security_level>
+                <last_inspection>2024-01-10</last_inspection>
+            </airport>
+
+            <airport id="LOC-6001" region="Северо-Западный" parent_airport="REG-201">
+                <name>Ржевка</name>
+                <location>Санкт-Петербург</location>
+                <type>местный</type>
+                <terminal_capacity>3000</terminal_capacity>
+                <current_passengers>2850</current_passengers>
+                <maintenance_capacity>1</maintenance_capacity>
+                <current_maintenance>0</current_maintenance>
+                <fuel_facilities>
+                    <refueling_station id="REFUEL-LOC6001-01" capacity="25000" current="22000"/>
+                </fuel_facilities>
+                <security_level>6</security_level>
+                <last_inspection>2024-01-12</last_inspection>
+            </airport>
+        </local_airports>
+    </airport_hierarchy>
+
+    <aircraft_fleet>
+        <aircraft id="AC-001" type="wide_body" base_airport="HUB-001">
+            <model>Боинг 777-300ER</model>
+            <airline>Аэрофлот</airline>
+            <registration>RA-73123</registration>
+            <manufacture_date>2020-05-15</manufacture_date>
+            <total_seats>402</total_seats>
+            <current_status>in_service</current_status>
+            <maintenance_schedule>
+                <last_maintenance>2024-01-05</last_maintenance>
+                <next_maintenance>2024-02-05</next_maintenance>
+                <maintenance_level>A-check</maintenance_level>
+            </maintenance_schedule>
+            <fuel_system>
+                <capacity>181000</capacity>
+                <current_fuel>145000</current_fuel>
+                <consumption_rate>8500</consumption_rate>
+            </fuel_system>
+            <verification>
+                <level>15</level>
+                <status>verified</status>
+                <verification_date>2024-01-15T08:30:00Z</verification_date>
+                <certificate>CERT-AC-001-2024</certificate>
+            </verification>
+            <current_location>HUB-001</current_location>
+            <flight_schedule>
+                <route name="Москва-Нью-Йорк" frequency="daily" demand="high" passengers="380"/>
+                <route name="Москва-Токио" frequency="daily" demand="medium" passengers="320"/>
+            </flight_schedule>
+        </aircraft>
+
+        <aircraft id="AC-101" type="narrow_body" base_airport="HUB-002">
+            <model>Airbus A320neo</model>
+            <airline>Россия</airline>
+            <registration>RA-73845</registration>
+            <manufacture_date>2021-08-20</manufacture_date>
+            <total_seats>186</total_seats>
+            <current_status>in_service</current_status>
+            <maintenance_schedule>
+                <last_maintenance>2024-01-08</last_maintenance>
+                <next_maintenance>2024-01-28</next_maintenance>
+                <maintenance_level>A-check</maintenance_level>
+            </maintenance_schedule>
+            <fuel_system>
+                <capacity>27000</capacity>
+                <current_fuel>22000</current_fuel>
+                <consumption_rate>2400</consumption_rate>
+            </fuel_system>
+            <verification>
+                <level>12</level>
+                <status>verified</status>
+                <verification_date>2024-01-14T14:20:00Z</verification_date>
+                <certificate>CERT-AC-101-2024</certificate>
+            </verification>
+            <current_location>REG-201</current_location>
+            <flight_schedule>
+                <route name="Санкт-Петербург-Сочи" frequency="3_times_daily" demand="high" passengers="175"/>
+                <route name="Санкт-Петербург-Калининград" frequency="2_times_daily" demand="medium" passengers="150"/>
+            </flight_schedule>
+        </aircraft>
+    </aircraft_fleet>
+
+    <logistics_routes>
+        <route id="RT-001">
+            <name>Транссибирский коридор</name>
+            <from_airport>HUB-001</from_airport>
+            <to_airport>HUB-002</to_airport>
+            <intermediate_airports>REG-101, LOC-5001</intermediate_airports>
+            <total_distance>634</total_distance>
+            <estimated_time>1h30m</estimated_time>
+            <fuel_requirements>18000</fuel_requirements>
+            <timestamps>
+                <created>2024-01-01T00:00:00Z</created>
+                <last_updated>2024-01-15T12:00:00Z</last_updated>
+            </timestamps>
+        </route>
+
+        <route id="RT-002">
+            <name>Северный маршрут</name>
+            <from_airport>HUB-002</from_airport>
+            <to_airport>REG-201</to_airport>
+            <intermediate_airports>LOC-6001</intermediate_airports>
+            <total_distance>285</total_distance>
+            <estimated_time>45m</estimated_time>
+            <fuel_requirements>8500</fuel_requirements>
+            <timestamps>
+                <created>2024-01-01T00:00:00Z</created>
+                <last_updated>2024-01-15T14:30:00Z</last_updated>
+            </timestamps>
+        </route>
+    </logistics_routes>
+</aviation_system>

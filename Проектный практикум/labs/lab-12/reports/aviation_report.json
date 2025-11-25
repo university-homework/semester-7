@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "created": "2024-01-15T10:00:00Z",
+    "last_updated": "2024-01-15T15:30:00Z",
+    "total_airports": "156",
+    "total_aircraft": "842",
+    "security_levels": "15"
+  },
+  "airports_summary": {
+    "total": 6,
+    "by_type": {
+      "hubs": 2,
+      "regional": 2,
+      "local": 2
+    }
+  },
+  "aircraft_summary": {
+    "total": 2,
+    "by_type": {
+      "wide_body": 1,
+      "narrow_body": 1
+    }
+  },
+  "efficiency_metrics": {
+    "total_airports": 6,
+    "total_capacity": 114000,
+    "current_passengers": 100050,
+    "utilization_rate": 87.76315789473685,
+    "fuel_efficiency": 95.15384615384616
+  }
+}

@@ -1,0 +1,4 @@
+number,route,status,load_factor,delay_minutes,fuel_consumption
+SU-1445,Москва-Сочи,scheduled,0.92,0,4200.0
+SU-1789,Москва-Новосибирск,delayed,0.75,45,5800.0
+SU-1256,Москва-Санкт-Петербург,boarding,0.97,0,2800.0

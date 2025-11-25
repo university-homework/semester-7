@@ -1,0 +1,39 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <title>Интерактивная анимация с несколькими сценариями</title>
+
+  <!-- Сценарий 1: Появление и увеличение -->
+  <g id="scenario1" cursor="pointer">
+    <rect x="50" y="50" width="120" height="40" fill="green" rx="5"/>
+    <text x="110" y="75" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Сценарий 1</text>
+  </g>
+
+  <!-- Сценарий 2: Изменение цвета и перемещение -->
+  <g id="scenario2" cursor="pointer">
+    <rect x="50" y="120" width="120" height="40" fill="blue" rx="5"/>
+    <text x="110" y="145" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Сценарий 2</text>
+  </g>
+
+  <!-- Сценарий 3: Сброс анимации -->
+  <g id="scenario3" cursor="pointer">
+    <rect x="50" y="190" width="120" height="40" fill="orange" rx="5"/>
+    <text x="110" y="215" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Сброс</text>
+  </g>
+
+  <!-- Анимированный объект -->
+  <circle id="animatedObject" cx="300" cy="200" r="30" fill="red">
+    <!-- Анимация для сценария 1 -->
+    <animate attributeName="r" begin="scenario1.click" dur="1s" from="30" to="50" fill="freeze" id="anim1"/>
+    <animate attributeName="fill" begin="scenario1.click" dur="1s" from="red" to="gold" fill="freeze"/>
+
+    <!-- Анимация для сценария 2 -->
+    <animate attributeName="fill" begin="scenario2.click" dur="1s" from="red" to="purple" fill="freeze" id="anim2"/>
+    <animateTransform attributeName="transform" type="translate"
+                      begin="scenario2.click" dur="2s" from="0,0" to="100,0" fill="freeze"/>
+
+    <!-- Анимация сброса -->
+    <animate attributeName="r" begin="scenario3.click" dur="0.5s" to="30" fill="freeze"/>
+    <animate attributeName="fill" begin="scenario3.click" dur="0.5s" to="red" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+                      begin="scenario3.click" dur="0.5s" to="0,0" fill="freeze"/>
+  </circle>
+</svg>

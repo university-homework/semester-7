@@ -1,0 +1,25 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <title>Анимированные часы</title>
+  <circle cx="200" cy="200" r="150" fill="lightyellow" stroke="black"/>
+
+  <!-- Минутная стрелка -->
+  <line x1="200" y1="200" x2="200" y2="100" stroke="black" stroke-width="4">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 200 200" to="360 200 200"
+                      dur="3600s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Часовая стрелка -->
+  <line x1="200" y1="200" x2="200" y2="130" stroke="black" stroke-width="6">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 200 200" to="360 200 200"
+                      dur="43200s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Секундная стрелка -->
+  <line x1="200" y1="200" x2="200" y2="80" stroke="red" stroke-width="2">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 200 200" to="360 200 200"
+                      dur="60s" repeatCount="indefinite"/>
+  </line>
+</svg>
