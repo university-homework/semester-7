@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_package = "com.example";
+option java_outer_classname = "BinaryReverseProto";
+
+// Сервис для вычисления функции B(m)
+service BinaryReverseService {
+  // Unary RPC - простой запрос-ответ
+  rpc CalculateB (BinaryReverseRequest) returns (BinaryReverseResponse);
+
+  // Server Streaming - вычисление для нескольких чисел
+  rpc CalculateBStream (BinaryReverseRequest) returns (stream BinaryReverseResponse);
+}
+
+// Запрос с числом m
+message BinaryReverseRequest {
+  int32 m = 1;
+}
+
+// Ответ с результатом B(m)
+message BinaryReverseResponse {
+  int32 m = 1;
+  int32 b_result = 2;
+  string binary_representation = 3;
+  string reversed_binary = 4;
+  string description = 5;
+}
